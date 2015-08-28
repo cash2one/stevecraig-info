@@ -46,8 +46,8 @@ class ButlertronAPI(tornado.web.Application):
                     #  BUT I LIKE TO LIVE DANGEROUSLY
                     for pattern in klass.BUTL_EVENT_API_PATTERNS:
                         self.add_handlers(config.BUTL.API['host_pattern'], [(r"/event/" + pattern, klass)])
-                except:
-                    logger.error("Can't load " + handler_class_name)
+                except Exception, e:
+                    logger.error("Can't load %s: %s" % (handler_class_name, e))
 
 
 class UnrecognizedEventError(Exception):
