@@ -1,3 +1,16 @@
+.DS_Store
+*.pyc
+
+logs/
+src/
+
+TODO
+
+celeryconfig.py
+core/config.py
+example_sms.json
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -1,0 +1,5 @@
+requests
+tornado
+twilio
+celery
+mysql-python
