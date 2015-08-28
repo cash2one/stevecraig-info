@@ -4,10 +4,6 @@ import uuid
 class SmsEventHandler(BaseHandler):
     BUTL_EVENT_API_PATTERNS = ['sms']
 
-    def __init__(self):
-        self.logger = logging.getLogger(__name__)
-        self.logger.addHandler(logging.StreamHandler())
-
     def write_error(status_code, **kwargs):
         pass
 
