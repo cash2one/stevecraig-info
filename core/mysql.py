@@ -20,10 +20,10 @@ class DatabaseManager():
         count = 0
         while count < retry_count:
             try:
-                self.conn = MySQLdb.connect(host=config.DATABASE['server'],
-                    user=config.DATABASE['user'],
-                    passwd=config.DATABASE['password'],
-                    db=config.DATABASE['schema'])
+                self.conn = MySQLdb.connect(host=config.DATABASE.MYSQL['server'],
+                    user=config.DATABASE.MYSQL['user'],
+                    passwd=config.DATABASE.MYSQL['password'],
+                    db=config.DATABASE.MYSQL['schema'])
                 self.conn.autocommit(True)
                 self.cursor = self.conn.cursor()
                 return
