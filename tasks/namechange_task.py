@@ -56,7 +56,8 @@ def change_name(whom):
         driver.find_element_by_css_selector('form#editteaminfoform label#LG_%s' % new_logo_id).click()
         driver.find_element_by_css_selector('input[name=jsubmit]').click()
         wait_for_element_present(driver, '#team_card_info')
-    except:
+    except Exception, e:
         driver.get_screenshot_as_file('wtf.png')
+        print str(e)
 
     driver.quit()
