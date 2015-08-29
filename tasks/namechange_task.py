@@ -57,6 +57,6 @@ def change_name(whom):
         driver.find_element_by_css_selector('input[name=jsubmit]').click()
         wait_for_element_present(driver, '#team_card_info')
     except:
-        pass
+        driver.get_screenshot_as_file('wtf.png')
 
     driver.quit()
