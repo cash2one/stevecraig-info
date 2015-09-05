@@ -40,6 +40,13 @@ def change_name(whom):
     desired_caps = DesiredCapabilities.PHANTOMJS.copy()
     desired_caps['javascriptEnabled'] = True 
     driver = webdriver.PhantomJS(desired_capabilities = desired_caps)
+
+    # use for local debugging
+    # break glass in case of fuckery
+    # profile = webdriver.FirefoxProfile()
+    # profile.set_preference('general.useragent.override', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:16.0) Gecko/20121026 Firefox/16.0')    
+    # driver = webdriver.Firefox(profile)
+
     try:
         #login 
         driver.get("http://football.fantasysports.yahoo.com/f1/936352")
